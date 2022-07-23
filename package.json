@@ -4,6 +4,8 @@
   "description": "Using testcontainers in a typescript project",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/benr-dev/testcontainers-experiments/issues"
   },
-  "homepage": "https://github.com/benr-dev/testcontainers-experiments#readme"
+  "homepage": "https://github.com/benr-dev/testcontainers-experiments#readme",
+  "devDependencies": {
+    "typescript": "4.x"
+  }
 }
