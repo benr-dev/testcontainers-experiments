@@ -1,4 +1,4 @@
 import './helloWorld';
 import { helloWorld } from './helloWorld';
 
-helloWorld();
+console.log(helloWorld());
