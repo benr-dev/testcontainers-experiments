@@ -1,0 +1,19 @@
+{
+  "name": "@benr-dev/testcontainers-experiments",
+  "version": "1.0.0",
+  "description": "Using testcontainers in a typescript project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benr-dev/testcontainers-experiments.git"
+  },
+  "author": "benr-dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benr-dev/testcontainers-experiments/issues"
+  },
+  "homepage": "https://github.com/benr-dev/testcontainers-experiments#readme"
+}
