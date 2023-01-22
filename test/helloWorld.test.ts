@@ -9,11 +9,13 @@ export let runningContainer: StartedTestContainer;
 
 describe("unit tests using a hello-world container", () => {
   beforeAll(async () => {
+    console.log(`Starting container ${container.image}`)
     runningContainer = await container.start();
   }, 30000);  // Long timeout as container startup is not immediate
 
   afterAll(async () => {
     await runningContainer.stop();
+    console.log(`Stopped container ${container.image}`)
   });
 
   test("should be able to get 'Hello World' page from the container", async () => {
