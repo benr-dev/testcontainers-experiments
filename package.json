@@ -4,11 +4,12 @@
   "description": "Using testcontainers in a typescript project",
   "main": "index.js",
   "scripts": {
-    "build": "npm run clean && npm run compile",
+    "build": "tsc -project tsconfig-build.json",
     "clean": "rimraf ./dist",
-    "compile": "tsc -project tsconfig-build.json",
+    "prebuild": "npm run clean",
+    "pretest": "npm run build",
     "start": "npm run build && node ./dist/index.js",
-    "test": "npm run build && jest",
+    "test": "jest",
     "test:integration:run": "cucumber-js",
     "test:integration": "npm run build && npm run test:integration:run"
   },
@@ -24,6 +25,7 @@
   "homepage": "https://github.com/benr-dev/testcontainers-experiments#readme",
   "devDependencies": {
     "@cucumber/cucumber": "^8.5.0",
+    "@cucumber/pretty-formatter": "^1.0.0",
     "@types/jest": "28.x",
     "axios": "^0.27.2",
     "jest": "28.x",
